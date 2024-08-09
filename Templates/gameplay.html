@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Jack</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+            background-color: #225338; 
+        }
+
+        #dealer-cards img {
+            height: 280px;
+            width: 200px;
+            margin: 1px;
+        }
+
+        #player-cards img {
+            height: 280px;
+            width: 200px;
+            margin: 1px;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            margin: 5px;
+        }
+    </style>
+    <script src="blackjack.js" defer></script>
+    <script src="gameloop.js" defer></script>
+</head>
+<body>
+    <div id="start-screen" class="screen" style="display:block">
+        <h1>Welcome to the Blackjack!</h1>
+        <button onclick="enterGame()">Play</button>
+    </div>
+    <canvas id="canvas" style="display:none"></canvas>
+
+    <h2>Dealer: <span id="dealer-sum"></span></h2>
+    <div id="dealer-cards">
+        <img id="hidden" src="./Card images/card_back.png" alt="Hidden card">
+    </div>
+
+    <h2>You: <span id="player-sum"></span></h2>
+    <div id="player-cards"></div>
+
+    <br>
+    <button id="hit">Hit</button>
+    <button id="stand">Stand</button>
+    <button id="double">Double</button>
+    <button id="surr">Surrender</button>
+    <p id="results"></p>
+</body>
+</html>
